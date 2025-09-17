@@ -26,6 +26,11 @@ server.get("/health",(req,res)=>{
     res.json({status:"ok"})
 })
 
+server.get("/",(req,res)=>{
+    res.json({status:"Saas Tenant Run "})
+})
+
+
 const PORT = 5000;
 connectDB().then(() =>{
     server.listen(PORT, () =>console.log(`Server running on port ${PORT}`))
